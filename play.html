@@ -1,25 +1,18 @@
 <!DOCTYPE html>
     <html>
-    <head>
-    <meta charset=utf-8 />
-    <title>Your title</title>
-      
-    
-      <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
-      <script src="https://unpkg.com/video.js/dist/video.js"></script>
-      <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
-       
-    </head>
-    <body>
-      <video id="my_video_1" class="video-js vjs-fluid vjs-default-skin" controls preload="auto"
-      data-setup='{}'>
-        <source src="http://media.7starcloud.com:1935/harimedia/mkptv/playlist.m3u8" type="application/x-mpegURL">
-      </video>
-      
-    <script>
+   <body>
+  <h1>Video.js Example Embed</h1>
+
+  <video-js id="my_video_1" class="vjs-default-skin" controls preload="auto" width="640" height="268">
+    <source src="http://tivolicraft.com/playlist/playfixed.m3u8" type="application/x-mpegURL">
+  </video-js>
+  
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
+  
+  <script>
     var player = videojs('my_video_1');
-    player.play();
-    </script>
-      
-    </body>
+  </script>
+  
+</body>
     </html>
