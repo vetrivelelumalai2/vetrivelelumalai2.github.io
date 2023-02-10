@@ -1,6 +1,27 @@
 <html>
-<body>
-    <video width="600" height="400" controls>
-        <source src="http://media.7starcloud.com:1935/harimedia/mkptv/playlist.m3u8" type="application/x-mpegURL">
-    </video>
-</body> 
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <video id="video" controls></video>
+    <script>
+    if(Hls.isSupported())
+    {
+        var video = document.getElementById('video');
+        var hls = new Hls();
+        hls.loadSource('http://media.7starcloud.com:1935/harimedia/mkptv/playlist.m3u8');
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED,function()
+        {
+            video.play();
+        });
+    }
+    else if (video.canPlayType('application/vnd.apple.mpegurl'))
+    {
+        video.src = 'http://media.7starcloud.com:1935/harimedia/mkptv/playlist.m3u8';
+        video.addEventListener('canplay',function()
+        {
+            video.play();
+        });
+    }
+    </script>
+  </body>
+</html>
