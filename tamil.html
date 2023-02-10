@@ -5,7 +5,15 @@
   <title>M3U8FileParser Browser Example</title>
   <script src="https://prasanth-snk.github.io/OnlineTV/m3u8-file-parser.min.js"></script>
   <script>
-    var reader = new M3U8FileParser();
+    
+     var apiUrl = 'https://iptv-org.github.io/iptv/languages/tam.m3u';
+    fetch(apiUrl).then(response => {
+      return response.json();
+    }).then(data => {
+      // Work with JSON data here
+      console.log(data);
+      
+       var reader = new M3U8FileParser();
     var m3u8Content = `
       #EXTM3U
       #EXTINF:10, Sample Title
@@ -15,8 +23,14 @@
       https://example.com/sample2.mp3
     `;
 
-    reader.read(m3u8Content);
+    reader.read(data);
     console.log('result', reader.getResult());
+      
+    }).catch(err => {
+      // Do something for an error here
+    });
+    
+   
   </script>
 </head>
 <body>
