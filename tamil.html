@@ -6,30 +6,7 @@
   <script src="https://prasanth-snk.github.io/OnlineTV/m3u8-file-parser.min.js"></script>
   <script>
    
-    Promise.all([
-  fetch("https://iptv-org.github.io/iptv/languages/tam.m3u"),
-  fetch("https://prasanth-snk.github.io/iptv/tamilLocal.m3u"),
-  fetch("https://prasanth-snk.github.io/youtube_m3u/tamil.m3u")
-])then(([tam, tamilLocal, tamil]) => {
-      // Work with JSON data here
-      console.log(tam);
-      
-       var reader = new M3U8FileParser();
-    var m3u8Content = `
-      #EXTM3U
-      #EXTINF:10, Sample Title
-      https://example.com/sample1.mp3
-
-      #EXTINF:10, Sample Title 2\n
-      https://example.com/sample2.mp3
-    `;
-
-    reader.read(tam);
-    console.log('result', reader.getResult());
-      
-    }).catch(err => {
-      // Do something for an error here
-    });
+   
     
    
   </script>
