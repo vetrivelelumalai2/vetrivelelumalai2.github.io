@@ -1,20 +1,32 @@
-<!DOCTYPE html>
-    <html>
-   <body>
-  <h1>Video.js Example Embed</h1>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://vjs.zencdn.net/7.7.6/video-js.css" rel="stylesheet" />
+    <title>m3u8 via video-js</title>
+  </head>
 
-         <script src="https://unpkg.com/video.js/dist/video.js"></script>
-  <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
-  
-       
-  <video-js id="my_video_1" class="vjs-default-skin" controls preload="auto" width="640" height="268">
-    <source src="http://media.7starcloud.com:1935/harimedia/mkptv/playlist.m3u8" type="application/x-mpegURL">
-  </video-js>
-  
+  <body>
+    <video
+      id="player"
+      class="video-js vjs-16-9 vjs-big-play-centered"
+      controls
+      preload="auto"
+      data-setup="{}"
+    >
+      <source
+        src="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+        type="application/x-mpegURL"
+      />
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that
+        <a href="https://videojs.com/html5-video-support/" target="_blank"
+          >supports HTML5 video</a
+        >
+      </p>
+    </video>
 
-  <script>
-    var player = videojs('my_video_1');
-  </script>
-  
-</body>
-    </html>
+    <script src="https://vjs.zencdn.net/7.7.6/video.js"></script>
+  </body>
+</html>
