@@ -7,9 +7,7 @@
   <script>
     
      var apiUrl = 'https://iptv-org.github.io/iptv/languages/tam.m3u';
-    fetch(apiUrl).then(response => {
-      return response.json();
-    }).then(data => {
+    fetch(apiUrl).then(data => {
       // Work with JSON data here
       console.log(data);
       
