@@ -22,7 +22,9 @@
     video = document.getElementById('source');
     video.src = data;
 
-    var options = {};
+    var options = {
+techOrder: ['hls']
+};
     var player = videojs('player', options, function onPlayerReady() {
       // In this context, `this` is the player that was created by Video.js.
       this.muted(true);
