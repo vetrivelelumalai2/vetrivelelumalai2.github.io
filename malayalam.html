@@ -21,7 +21,7 @@
   <meta charset="utf-8" />
   <title>Tamil TV</title>
   <script src="https://prasanth-snk.github.io/OnlineTV/m3u8-file-parser.min.js"></script>
-  <script src="./tamil.min.js"></script>
+  <script src="https://prasanth-snk.github.io/OnlineTV/malayalam.min.js"></script>
   <script>
     getData().then(allResponses => {
       var reader = new M3U8FileParser();
@@ -30,6 +30,7 @@
       reader.read(allResponses[2]);
       const result = reader.getResult();
       if (result?.segments) {
+        console.log('result', result.segments);
         let text = '';
         for (let i = 0; i < result.segments.length; i++) {
           text += `<div class="grid-item">
@@ -51,7 +52,7 @@
   <script>
     function openPlayer(data) {
       localStorage.setItem("url", data);
-      window.location.href = "./play.html";
+      window.location.href = "https://prasanth-snk.github.io/OnlineTV/play.html";
     }
   </script>
 
