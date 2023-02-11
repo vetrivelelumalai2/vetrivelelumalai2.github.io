@@ -19,11 +19,11 @@
   </video>
   <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
   <script>
-    var url = localStorage.getItem('url');
+    var data = localStorage.getItem('url');
     var logo = localStorage.getItem('logo');
 
     video = document.getElementById('source');
-    video.src = url;
+    video.src = data;
     if (logo) {
       player = document.getElementById('player');
       player.poster = logo;
