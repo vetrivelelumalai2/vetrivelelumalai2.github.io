@@ -44,7 +44,7 @@
         let text = '';
         for (let i = 0; i < result.segments.length; i++) {
           text += `<div id="channel" class="grid-item">
-            <a href="#" onclick="openPlayer('${result.segments[i]?.url}')">
+            <a href="#" onclick="openPlayer('${result.segments[i]?.url}', '${result.segments[i]?.inf?.tvgLogo ?? ''}')">
             ${result.segments[i]?.inf?.tvgLogo ? `<img src="${result.segments[i]?.inf?.tvgLogo}" width="100" height="100">` : ''}
             <h5>${result.segments[i]?.inf?.title ?? ''}</h5>
           </a>
@@ -58,9 +58,10 @@
   </script>
 
   <script>
-    function openPlayer(data) {
-      localStorage.setItem("url", data);
-      window.location.href = "./play.html";
+    function openPlayer(url, logo) {
+      localStorage.setItem("url", url);
+      localStorage.setItem("logo", logo);
+      window.location.href = "https://prasanth-snk.github.io/OnlineTV/play.html";
     }
   </script>
   <script>
