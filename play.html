@@ -29,7 +29,16 @@
       player.poster = logo;
     }
 
-    var options = {};
+    var options = {
+      controls: true,
+      html5: {
+        hls: {
+          enableLowInitialPlaylist: true,
+          smoothQualityChange: true,
+          overrideNative: true,
+        }
+      }
+    };
     var player = videojs('player', options, function onPlayerReady() {
       // In this context, `this` is the player that was created by Video.js.
       this.muted(true);
