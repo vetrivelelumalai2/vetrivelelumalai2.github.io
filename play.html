@@ -1,32 +1,24 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://vjs.zencdn.net/7.7.6/video-js.css" rel="stylesheet" />
-    <title>m3u8 via video-js</title>
-  </head>
 
-  <body>
-    <video
-      id="player"
-      class="video-js vjs-16-9 vjs-big-play-centered"
-      controls
-      preload="auto"
-      data-setup="{}"
-    >
-      <source
-        src="https://6n3yogbnd9ok-hls-live.5centscdn.com/threetamil/d0dbe915091d400bd8ee7f27f0791303.sdp/index.m3u8"
-        type="application/x-mpegURL"
-      />
-      <p class="vjs-no-js">
-        To view this video please enable JavaScript, and consider upgrading to a
-        web browser that
-        <a href="https://videojs.com/html5-video-support/" target="_blank"
-          >supports HTML5 video</a
-        >
-      </p>
-    </video>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://vjs.zencdn.net/7.7.6/video-js.css" rel="stylesheet" />
+  <title>m3u8 via video-js</title>
+</head>
 
-    <script src="https://vjs.zencdn.net/7.7.6/video.js"></script>
-  </body>
+<body>
+  <video id="player" class="video-js vjs-16-9 vjs-big-play-centered" controls preload="auto" data-setup="{}">
+    <source src="https://6n3yogbnd9ok-hls-live.5centscdn.com/threetamil/d0dbe915091d400bd8ee7f27f0791303.sdp/index.m3u8"
+      type="application/x-mpegURL" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+
+  <script src="https://vjs.zencdn.net/7.7.6/video.js"></script>
+</body>
+
 </html>
