@@ -12,10 +12,11 @@ function getData() {
 }
 
 
+//malayalam
 function getData() {
     return Promise.all([
+        //fetch(atob("aHR0cHM6Ly9pcHR2LW9yZy5naXRodWIuaW8vaXB0di9sYW5ndWFnZXMvbWFsLm0zdQ==")).then(resp => resp.text()),
         fetch(atob("aHR0cHM6Ly9wcmFzYW50aC1zbmsuZ2l0aHViLmlvL3lvdXR1YmVfbTN1L21hbGF5YWxhbS5tM3U=")).then(resp => resp.text()),
-        fetch(atob("aHR0cHM6Ly9pcHR2LW9yZy5naXRodWIuaW8vaXB0di9sYW5ndWFnZXMvbWFsLm0zdQ==")).then(resp => resp.text()),
         fetch(atob("aHR0cHM6Ly9wcmFzYW50aC1zbmsuZ2l0aHViLmlvL2lwdHYvbWFsYXlhbGFtLm0zdQ==")).then(resp => resp.text())
     ]).then(allResponses => {
         return allResponses;
