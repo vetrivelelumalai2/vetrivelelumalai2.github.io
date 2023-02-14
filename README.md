@@ -3,21 +3,21 @@
 
 ### Malayalam Channels
 
-https://prasanth-snk.github.io/OnlineTV/malayalam.html
+https://prasanth-snk.github.io/onlinetv/malayalam.html
 
 
 ### Tamil Channels
 
-https://prasanth-snk.github.io/OnlineTV/malayalam.html
+https://prasanth-snk.github.io/onlinetv/malayalam.html
 
 
 ### All Other Language Channels
 
-https://prasanth-snk.github.io/OnlineTV/index.html
+https://prasanth-snk.github.io/onlinetv/index.html
 
 
 ### XXX Channels
 
-https://prasanth-snk.github.io/OnlineTV/xxx.html
+https://prasanth-snk.github.io/onlinetv/xxx.html
 
 
