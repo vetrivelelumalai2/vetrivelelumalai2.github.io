@@ -25,7 +25,7 @@ function getData() {
     });
 }
 
-
+//lang db
 function getData() {
     return fetch(atob("aHR0cHM6Ly9pcHR2LW9yZy5naXRodWIuaW8vaXB0di9pbmRleC5sYW5ndWFnZS5tM3U="))
         .then(resp => resp.text())
