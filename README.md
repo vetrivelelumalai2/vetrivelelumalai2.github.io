@@ -8,7 +8,7 @@ https://prasanth-snk.github.io/onlinetv/malayalam.html
 
 ### Tamil Channels
 
-https://prasanth-snk.github.io/onlinetv/malayalam.html
+https://prasanth-snk.github.io/onlinetv/tamil.html
 
 
 ### All Other Language Channels
