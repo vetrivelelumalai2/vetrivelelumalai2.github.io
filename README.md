@@ -15,3 +15,8 @@ https://prasanth-snk.github.io/OnlineTV/malayalam.html
 ``` bash
 https://prasanth-snk.github.io/OnlineTV/index.html
 ```
+
+### XXX Channels
+``` bash
+https://prasanth-snk.github.io/OnlineTV/xxx.html
+```
