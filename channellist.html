@@ -31,7 +31,12 @@
   </style>
   <meta charset="utf-8" />
   <title>Channels List</title>
+</head>
 
+<body>
+  <input type="text" id="searchInput" onkeyup="search()" placeholder="Search Here" class="search">
+  <div id="apiResponse" class="grid-container">
+  </div>
   <script>
     function openPlayer(url, logo) {
       localStorage.setItem("url", url);
@@ -63,12 +68,6 @@
       }
     }
   </script>
-</head>
-
-<body>
-  <input type="text" id="searchInput" onkeyup="search()" placeholder="Search Here" class="search">
-  <div id="apiResponse" class="grid-container">
-  </div>
   <script>
     var data = localStorage.getItem('list');
     if (data) {
@@ -84,6 +83,7 @@
             </div> `;
         }
         document.getElementById('apiResponse').innerHTML = text;
+        search();
       }
     }
   </script>
