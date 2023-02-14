@@ -10,3 +10,8 @@ https://prasanth-snk.github.io/OnlineTV/malayalam.html
 ``` bash
 https://prasanth-snk.github.io/OnlineTV/malayalam.html
 ```
+
+### All Other Language Channels
+``` bash
+https://prasanth-snk.github.io/OnlineTV/index.html
+```
