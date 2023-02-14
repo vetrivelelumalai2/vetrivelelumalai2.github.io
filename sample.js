@@ -1,6 +1,7 @@
+//tamil
 function getData() {
     return Promise.all([
-        fetch(atob("aHR0cHM6Ly9pcHR2LW9yZy5naXRodWIuaW8vaXB0di9sYW5ndWFnZXMvdGFtLm0zdQ==")).then(resp => resp.text()),
+        //fetch(atob("aHR0cHM6Ly9pcHR2LW9yZy5naXRodWIuaW8vaXB0di9sYW5ndWFnZXMvdGFtLm0zdQ==")).then(resp => resp.text()),
         fetch(atob("aHR0cHM6Ly9wcmFzYW50aC1zbmsuZ2l0aHViLmlvL2lwdHYvdGFtaWxMb2NhbC5tM3U=")).then(resp => resp.text()),
         fetch(atob("aHR0cHM6Ly9wcmFzYW50aC1zbmsuZ2l0aHViLmlvL3lvdXR1YmVfbTN1L3RhbWlsLm0zdQ==")).then(resp => resp.text())
     ]).then(allResponses => {
@@ -34,8 +35,9 @@ function getData() {
         });
 }
 
+// languages
 function getData() {
-    return fetch(atob("aHR0cHM6Ly9pcHR2LW9yZy5naXRodWIuaW8vaXB0di9jYXRlZ29yaWVzL3h4eC5tM3U="))
+    return fetch(atob("aHR0cHM6Ly9wcmFzYW50aC1zbmsuZ2l0aHViLmlvL2lwdHYvaW5kZXgubGFuZ3VhZ2UubTN1"))
         .then(resp => resp.text())
         .then(allResponses => {
             return allResponses;
