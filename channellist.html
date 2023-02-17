@@ -73,12 +73,23 @@
     if (data) {
       const result = JSON.parse(data);
       if (result) {
+        const sortedData = result.sort((a, b) => {
+          let fa = a.inf.title.toLowerCase(), fb = b.inf.title.toLowerCase();
+          if (fa < fb) {
+            return -1;
+          }
+          if (fa > fb) {
+            return 1;
+          }
+          return 0;
+        });
+
         let text = '';
-        for (let i = 0; i < result.length; i++) {
+        for (let i = 0; i < sortedData.length; i++) {
           text += `<div id="channel" class="grid-item">
-            <a href="#" onclick="openPlayer('${result[i]?.url}', '${result[i]?.inf?.tvgLogo ?? ''}')">
-            ${result[i]?.inf?.tvgLogo ? `<img src="${result[i]?.inf?.tvgLogo}" width="100" height="100">` : ''}
-            <h5>${result[i]?.inf?.title ?? ''}</h5>
+            <a href="#" onclick="openPlayer('${sortedData[i]?.url}', '${sortedData[i]?.inf?.tvgLogo ?? ''}')">
+            ${sortedData[i]?.inf?.tvgLogo ? `<img src="${sortedData[i]?.inf?.tvgLogo}" width="100" height="100">` : ''}
+            <h5>${sortedData[i]?.inf?.title ?? ''}</h5>
           </a>
             </div> `;
         }
