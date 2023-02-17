@@ -9,8 +9,8 @@
 </head>
 
 <body>
-  <video id="player" class="video-js vjs-default-skin" controls preload="auto" poster="" data-setup="{}"
-    allow="autoplay">
+  <video id="player" class="video-js vjs-default-skin" withCredentials=true controls preload="auto" poster=""
+    data-setup="{}" allow="autoplay">
     <source id="source" src="" type="application/x-mpegURL" />
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a
@@ -33,21 +33,14 @@
       || document.documentElement.clientWidth
       || document.body.clientWidth;
 
-      var height = window.innerHeight
+    var height = window.innerHeight
       || document.documentElement.clientHeight
       || document.body.clientHeight;
 
     var options = {
-      width: (width-20),
-      height: (height-20),
-      controls: true,
-      html5: {
-        hls: {
-          enableLowInitialPlaylist: true,
-          smoothQualityChange: true,
-          overrideNative: true,
-        }
-      }
+      width: (width - 20),
+      height: (height - 20),
+      controls: true
     };
     var player = videojs('player', options, function onPlayerReady() {
       // In this context, `this` is the player that was created by Video.js.
