@@ -47,6 +47,18 @@ function getData() {
         });
 }
 
+//xxx
+function getData() {
+    return fetch(atob("aHR0cHM6Ly9wcmFzYW50aC1zbmsuZ2l0aHViLmlvL2lwdHYveHN0cmVhbS5tM3U="))
+        .then(resp => resp.text())
+        .then(allResponses => {
+            return allResponses;
+        }).catch(err => {
+            return err;
+        });
+}
+
+
 function getData() {
     return Promise.all([
         fetch(atob("aHR0cHM6Ly9pcHR2LW9yZy5naXRodWIuaW8vaXB0di9jYXRlZ29yaWVzL3h4eC5tM3U=")).then(resp => resp.text()),
