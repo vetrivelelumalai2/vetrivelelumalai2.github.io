@@ -1,9 +1,10 @@
 //tamil
 function getData() {
     return Promise.all([
-        //fetch(atob("aHR0cHM6Ly9pcHR2LW9yZy5naXRodWIuaW8vaXB0di9sYW5ndWFnZXMvdGFtLm0zdQ==")).then(resp => resp.text()),
         fetch(atob("aHR0cHM6Ly9wcmFzYW50aC1zbmsuZ2l0aHViLmlvL2lwdHYvdGFtaWxMb2NhbC5tM3U=")).then(resp => resp.text()),
-        fetch(atob("aHR0cHM6Ly9wcmFzYW50aC1zbmsuZ2l0aHViLmlvL3lvdXR1YmVfbTN1L3RhbWlsLm0zdQ==")).then(resp => resp.text())
+        fetch(atob("aHR0cHM6Ly9wcmFzYW50aC1zbmsuZ2l0aHViLmlvL3lvdXR1YmVfbTN1L3RhbWlsLm0zdQ==")).then(resp => resp.text()),
+        fetch(atob("aHR0cHM6Ly9wcmFzYW50aC1zbmsuZ2l0aHViLmlvL2lwdHYvdGFtaWxfc2F0ZWxsaXRlX3R2Lm0zdQ==")).then(resp => resp.text()),
+        fetch(atob("aHR0cHM6Ly9wcmFzYW50aC1zbmsuZ2l0aHViLmlvL2lwdHYvdGFtaWxfaXB0di5tM3U=")).then(resp => resp.text())
     ]).then(allResponses => {
         return allResponses;
     }).catch(err => {
